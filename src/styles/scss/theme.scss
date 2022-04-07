@@ -1,0 +1,18 @@
+@use './reset.scss';
+@use './zondax-themes/zondax-light.scss' as *;
+@use './zondax-themes/zondax-dark.scss' as *;
+
+@forward '@carbon/themes/scss/themes';
+@use '@carbon/themes/scss/themes' as *;
+
+@mixin setTheme($theme: $carbon--theme--zondax-light) {
+  @include carbon--theme($theme: $theme, $emit-custom-properties: true);
+}
+
+@mixin useDarkTheme() {
+  @include carbon--theme($theme: $carbon--theme--zondax-dark, $emit-custom-properties: true);
+}
+
+@mixin useLightTheme() {
+  @include carbon--theme($theme: $carbon--theme--zondax-light, $emit-custom-properties: true);
+}
