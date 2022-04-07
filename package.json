@@ -25,7 +25,7 @@
     "ag-grid-community": "^27.1.0",
     "ag-grid-react": "^27.1.0",
     "carbon-components": "^10.56.0",
-    "carbon-components-react": "^7.56.0",
+    "carbon-components-react": "^8.0.3",
     "carbon-icons": "^7.0.7",
     "cors": "^2.8.5",
     "next-connect": "^0.12.2",
