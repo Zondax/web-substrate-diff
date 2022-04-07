@@ -1,0 +1,144 @@
+@use './colors.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700;800&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+
+/* ---- fonts ---- */
+$text: 'Inter var', sans-serif, Arial, Helvetica, "Segoe UI", -apple-system;
+$title: 'Epilogue', sans-serif, Arial, Helvetica, "Segoe UI", -apple-system;
+
+/* ---- sizes ---- */
+/* set base values */
+// $text-base-size: 1rem;
+// $text-scale-ratio: 1.25;
+// $baseline: 24px;
+
+/* type scale */
+$text-xxxs: 0.512rem; /*0.512rem, 8.19  ---- caption*/
+$text-xxs: 0.75rem; /*0.75rem, 12.00px  ---- text03*/
+$text-xs: 0.875rem; /*0.875rem, 14.00px  ---- text02*/
+$text-sm: 1.00rem; /*1.00rem, 16.00px ---- text01*/
+$text-md: 1.25rem; /*1.25rem, 20.00px ---- subheading, heading04*/
+$text-lg: 1.563rem; /*1.563rem, 25.00px  ---- heading03*/
+$text-xl: 1.953rem; /*1.953rem, 31.25px  ---- heading02*/
+$text-xxl: 2.441rem; /*2.441rem, 39.06px  ---- heading01*/
+$text-xxxl: 3.052rem; /*3.052rem, 48.83px  ---- display*/
+// $text-xxxxl: 3.815rem; /*3.815rem, 61.04pxn ---- display*/
+
+/* weight values */
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+
+/* spacing values */
+// $space-sm: calc($baseline / 2);
+// $space-md: $baseline;
+// $space-lg: calc($baseline * 2);
+// $space-xl: calc($baseline * 3);
+
+@supports (font-variation-settings: normal) {
+    p {
+      font-family: 'Inter var', sans-serif;
+    }
+    i {
+      font-style: italic;
+    }
+}
+
+/* mixins */
+@mixin italic($italic:false){
+    @if $italic == true {
+    font-style: italic;
+    } else {
+        font-style: normal;
+    }
+}
+
+/* hero title */
+@mixin display($color: $black, $weight: $bold, $italic: false){
+    font-family: $title;
+    font-size: $text-xxxl;
+    color: $color;
+    font-weight: $weight;
+    @include italic;
+}
+  
+/* Heading */
+@mixin heading01($color: $black, $weight: $semibold, $italic: false) {
+    font-family: $title;
+    font-size: $text-xxl;
+    color: $color;
+    font-weight: $weight;
+    @include italic;
+}
+@mixin heading02($color: $black, $weight: $semibold, $italic: false) {
+    font-family: $title;
+    font-size: $text-xl;
+    color: $color;
+    font-weight: $weight;
+    @include italic;
+}
+@mixin heading03($color: $black, $weight: $semibold, $italic: false) {
+    font-family: $title;
+    font-size: $text-lg;
+    color: $color;
+    font-weight: $weight;
+    @include italic;
+}
+
+@mixin heading04($color: $black, $weight: $semibold, $italic: false) {
+    font-family: $title;
+    font-size: $text-md;
+    color: $color;
+    font-weight: $weight;
+    @include italic;
+}
+
+// @mixin heading05($color: $black, $weight: $semibold, $italic: false) {
+//     font-family: $title;
+//     font-size: $text-sm;
+//     color: $color;
+//     font-weight: $weight;
+//     @include italic;
+// }
+  
+  /* Subheading */
+@mixin subheading($color: $black, $weight: $regular, $italic: false) {
+    font-family: $text;
+    font-size: $text-md;
+    color: $color;
+    font-weight: $weight;
+    @include italic;
+}
+  
+  /* Text */
+  @mixin text01($color: $black, $weight: $regular, $italic: false) {
+    font-family: $text;
+    font-size: $text-sm;
+    color: $color;
+    font-weight: $weight;
+    @include italic;
+  }
+  @mixin text02($color: $black, $weight: $regular, $italic: false) {
+    font-family: $text;
+    font-size: $text-xs;
+    color: $color;
+    font-weight: $weight;
+    @include italic;
+  }
+  @mixin text03($color: $black, $weight: $regular, $italic: false) {
+    font-family: $text;
+    font-size: $text-xxs;
+    color: $color;
+    font-weight: $weight;
+    @include italic;
+  }
+  
+  /* Caption */
+  @mixin caption($color: $black, $weight: $regular, $italic: false) {
+    font-family: $text;
+    font-size: $text-xxxs; /* should be 0.64rem, not defined yet */
+    color: $color;
+    font-weight: $weight;
+    @include italic;
+  }
