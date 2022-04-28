@@ -43,7 +43,7 @@
     "webpack": "^5.70.0"
   },
   "devDependencies": {
-    "@types/carbon-components-react": "^7.49.0",
+    "@types/carbon-components-react": "^7.55.1",
     "@types/cors": "^2.8.12",
     "@types/jest": "^27.4.1",
     "@types/react-helmet": "^6.1.5",
