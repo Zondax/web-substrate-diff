@@ -49,7 +49,7 @@
     "@types/react-helmet": "^6.1.5",
     "@types/styled-components": "^5.1.24",
     "@types/typography": "^0.16.4",
-    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.19.0",
     "concurrently": "^7.0.0",
     "css-loader": "^6.7.1",
